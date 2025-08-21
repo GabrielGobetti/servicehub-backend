@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     try {
-      const response = await fetch('http://localhost:8080/usuarios', {
+      const response = await fetch('https://service-hub.up.railway.app/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
