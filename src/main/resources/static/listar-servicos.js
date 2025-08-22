@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const listaServicos = document.getElementById('listaServicos');
 
-  fetch('http://localhost:8080/servicos')
+  fetch('https://service-hub.up.railway.app/#/servicos')
     .then(response => response.json())
     .then(servicos => {
       listaServicos.innerHTML = '';
