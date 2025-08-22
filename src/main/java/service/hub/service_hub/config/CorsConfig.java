@@ -13,10 +13,13 @@ public class CorsConfig {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**") // todos os endpoints
-                        .allowedOrigins("https://meusite.com") // teu front-end
+                registry.addMapping("/**") // todas as rotas
+                        .allowedOrigins(
+                                "http://localhost:3000",
+                                "https://service-hub.up.railway.app"
+                        )
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
-                        .allowedHeaders("*");
+                        .allowCredentials(true);
             }
         };
     }
